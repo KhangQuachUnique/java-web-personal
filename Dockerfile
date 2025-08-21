@@ -1,14 +1,12 @@
-# Dùng Tomcat base image chính thức
+# Stage 1: Build Maven
+FROM maven:3.9.6-eclipse-temurin-17 AS builder
+WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
+
+# Stage 2: Tomcat
 FROM tomcat:9.0-jdk17-temurin
-
-# Xoá ứng dụng mặc định (ROOT, docs, examples) để nhẹ hơn
 RUN rm -rf /usr/local/tomcat/webapps/*
-
-# Copy file .war của bạn vào webapps
-COPY target/untitled.war /usr/local/tomcat/webapps/ROOT.war
-
-# Expose port 8080
+COPY --from=builder /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
 EXPOSE 8080
-
-# Chạy Tomcat
 CMD ["catalina.sh", "run"]
