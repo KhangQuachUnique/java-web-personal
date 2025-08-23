@@ -7,6 +7,8 @@ import javax.servlet.http.*;
 import murach.models.User;
 import murach.data.UserDB;
 
+import murach.constants.PathConstants;
+
 public class JoinForm extends HttpServlet {
 
     @Override
@@ -20,9 +22,10 @@ public class JoinForm extends HttpServlet {
         }
 
         String url;
+        String page;
         switch (action) {
             case "join":
-                url = "/pages/joinForm.jsp"; // trang đăng ký
+                page = PathConstants.JOIN_FORM_JSP; // sử dụng constant
                 break;
 
             case "add":
@@ -35,18 +38,18 @@ public class JoinForm extends HttpServlet {
                 User user = new User(firstName, lastName, email);
                 UserDB.insert(user);
 
-                url = "/untitled/thanks"; // trang cảm ơn
-                response.sendRedirect(url);
+                // Sử dụng constant thay vì hard-code URL
+                response.sendRedirect(PathConstants.THANKS);
                 return;
 
             default:
-                url = "/pages/joinForm.jsp";
+                page = PathConstants.JOIN_FORM_JSP; // sử dụng constant
                 break;
         }
 
         // Forward request & response
         getServletContext()
-            .getRequestDispatcher(url)
+            .getRequestDispatcher(page)
             .forward(request, response);
     }
 

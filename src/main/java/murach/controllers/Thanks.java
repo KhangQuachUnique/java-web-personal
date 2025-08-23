@@ -3,6 +3,8 @@ package murach.controllers;
 import murach.data.UserDB;
 import murach.models.User;
 
+import murach.constants.PathConstants;
+
 import java.util.Enumeration;
 import java.util.logging.Logger;
 
@@ -35,7 +37,7 @@ public class Thanks extends HttpServlet {
         logger.info("Response Content Type: " + response.getContentType());
 
         User user = UserDB.getLastUser();
-        String url = "/pages/thanks.jsp";
+        String url = PathConstants.THANKS_JSP;
         request.setAttribute("user", user);
         getServletContext().getRequestDispatcher(url).forward(request, response);
     }
