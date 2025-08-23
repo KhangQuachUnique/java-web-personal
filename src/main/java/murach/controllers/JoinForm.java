@@ -1,13 +1,13 @@
-package murach.email;
+package murach.controllers;
 
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-import murach.business.User;
+import murach.models.User;
 import murach.data.UserDB;
 
-public class EmailListServlet extends HttpServlet {
+public class JoinForm extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request,
@@ -22,7 +22,7 @@ public class EmailListServlet extends HttpServlet {
         String url;
         switch (action) {
             case "join":
-                url = "/index.jsp"; // trang đăng ký
+                url = "/pages/joinForm.jsp"; // trang đăng ký
                 break;
 
             case "add":
@@ -35,21 +35,19 @@ public class EmailListServlet extends HttpServlet {
                 User user = new User(firstName, lastName, email);
                 UserDB.insert(user);
 
-                // Gửi user object sang JSP
-                request.setAttribute("user", user);
-
-                url = "/thanks.jsp"; // trang cảm ơn
-                break;
+                url = "/untitled/thanks"; // trang cảm ơn
+                response.sendRedirect(url);
+                return;
 
             default:
-                url = "/index.jsp";
+                url = "/pages/joinForm.jsp";
                 break;
         }
 
         // Forward request & response
         getServletContext()
-                .getRequestDispatcher(url)
-                .forward(request, response);
+            .getRequestDispatcher(url)
+            .forward(request, response);
     }
 
     @Override
