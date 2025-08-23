@@ -15,7 +15,7 @@ request.setAttribute("address", "Ho Chi Minh City, Vietnam"); request.setAttribu
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
+    <title><%= application.getInitParameter("siteTitle") %></title>
     <link rel="stylesheet" href="index.css?v=1" />
   </head>
   <body>

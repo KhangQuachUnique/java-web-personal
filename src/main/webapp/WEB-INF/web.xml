@@ -5,6 +5,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                              http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
 
+  <context-param>
+    <param-name>siteTitle</param-name>
+    <param-value>KhangQuach</param-value>
+  </context-param>
+
   <!-- Khai báo servlet -->
   <servlet>
     <servlet-name>RegisterForm</servlet-name>

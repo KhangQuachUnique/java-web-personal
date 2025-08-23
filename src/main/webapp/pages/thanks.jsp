@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Murach's Java Servlets and JSP</title>
+    <title><%= application.getInitParameter("siteTitle") %></title>
   </head>
   <body>
     <h1>Thanks for joining our email list!</h1>
