@@ -105,7 +105,9 @@ request.setAttribute("address", "Ho Chi Minh City, Vietnam"); request.setAttribu
               <div class="skill-card"><span>Python</span></div>
               <div class="skill-card"><span>HTML/CSS</span></div>
               <div class="skill-card"><span>JavaScript</span></div>
-              <div class="skill-card"><span>Spring Boot</span></div>
+              <div class="skill-card"><span>Express</span></div>
+              <div class="skill-card"><span>React</span></div>
+              <div class="skill-card"><span>Servlet</span></div>
             </div>
           </div>
         </div>
