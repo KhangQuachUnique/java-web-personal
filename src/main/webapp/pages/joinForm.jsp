@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title><%= application.getInitParameter("siteTitle") %></title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./pages/joinForm.css" />
   </head>
-  <body>
-    <h1>Join our email list</h1>
+  <body class="form-body">
+    <h1>JOIN OUR EMAIL LIST</h1>
     <span>To join our email list, enter your name and email address below.</span>
 
     <form action="join" method="post">
