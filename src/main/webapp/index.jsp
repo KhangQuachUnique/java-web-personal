@@ -48,7 +48,7 @@ request.setAttribute("address", "Ho Chi Minh City, Vietnam"); request.setAttribu
             </p>
             <div class="hero-buttons">
               <a
-                href="https://github.com/khangquach"
+                href=${github}
                 class="btn btn-outline"
                 target="_blank"
                 rel="noopener noreferrer"
