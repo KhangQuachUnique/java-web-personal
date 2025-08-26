@@ -12,4 +12,5 @@ public class PathConstants {
     // JSP page paths
     public static final String JOIN_FORM_JSP = "/pages/joinForm.jsp";
     public static final String THANKS_JSP = "/pages/thanks.jsp";
+    public static final String SURVEY_JSP = "/pages/survey.jsp";
 }
