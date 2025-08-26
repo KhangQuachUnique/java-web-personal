@@ -5,10 +5,8 @@ request.setAttribute("studentId", "23133033"); request.setAttribute("email",
 "kadfwfsfsvs@gmail.com"); request.setAttribute("studentEmail",
 "23133033@student.hcmute.edu.vn"); request.setAttribute("phone", "0916433455");
 request.setAttribute("github", "https://github.com/KhangQuachUnique");
-request.setAttribute("dob", "09/10/2005");
-request.setAttribute("address", "Ho Chi Minh City, Vietnam"); request.setAttribute("skills", new String[]{"Java",
-"SQL", "Python", "HTML/CSS", "JavaScript", "Spring Boot"});
-%>
+request.setAttribute("dob", "09/10/2005"); request.setAttribute("address", "Ho Chi Minh City, Vietnam"); request.setAttribute("skills", new String[]{"Java",
+"SQL", "Python", "HTML/CSS", "JavaScript", "Spring Boot"}); %>
 
 <!DOCTYPE html>
 <html lang="vi">
@@ -48,7 +46,7 @@ request.setAttribute("address", "Ho Chi Minh City, Vietnam"); request.setAttribu
             </p>
             <div class="hero-buttons">
               <a
-                href=${github}
+                href="${github}"
                 class="btn btn-outline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -121,9 +119,14 @@ request.setAttribute("address", "Ho Chi Minh City, Vietnam"); request.setAttribu
         </div>
         <div class="homeworks-grid">
           <div class="homework-card">
-            <h3>Assignment 1</h3>
+            <h3>Assignment 2</h3>
             <p>Introduction to Java Programming</p>
             <a href="/join" class="btn btn-primary">View Details</a>
+          </div>
+          <div class="homework-card">
+            <h3>Assignment 3</h3>
+            <p>Introduction to Java Programming</p>
+            <a href="/survey" class="btn btn-primary">View Details</a>
           </div>
         </div>
       </section>

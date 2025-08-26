@@ -7,10 +7,12 @@
   </head>
   <body class="form-body">
     <h1>JOIN OUR EMAIL LIST</h1>
-    <span>To join our email list, enter your name and email address below.</span>
+    <span
+      >To join our email list, enter your name and email address below.</span
+    >
 
     <form action="join" method="post">
-        <input type="hidden" name="action" value="add" />
+      <input type="hidden" name="action" value="add" />
       <div class="input-element">
         <label for="firstName">First name: </label>
         <input type="text" id="firstName" name="firstName" required />
@@ -27,4 +29,3 @@
     </form>
   </body>
 </html>
-
