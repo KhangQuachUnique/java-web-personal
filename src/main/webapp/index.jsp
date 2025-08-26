@@ -1,11 +1,15 @@
 <% request.setAttribute("name", "Quach Thanh Khang");
-request.setAttribute("age", 20); request.setAttribute("university", "HCMUTE");
+request.setAttribute("age", 20);
+request.setAttribute("university", "HCMUTE");
 request.setAttribute("major", "Data Engineering");
-request.setAttribute("studentId", "23133033"); request.setAttribute("email",
-"kadfwfsfsvs@gmail.com"); request.setAttribute("studentEmail",
-"23133033@student.hcmute.edu.vn"); request.setAttribute("phone", "0916433455");
+request.setAttribute("studentId", "23133033");
+request.setAttribute("email", "kadfwfsfsvs@gmail.com");
+request.setAttribute("studentEmail", "23133033@student.hcmute.edu.vn");
+request.setAttribute("phone", "0916433455");
 request.setAttribute("github", "https://github.com/KhangQuachUnique");
-request.setAttribute("dob", "09/10/2005"); request.setAttribute("address", "Ho Chi Minh City, Vietnam"); request.setAttribute("skills", new String[]{"Java",
+request.setAttribute("dob", "09/10/2005");
+request.setAttribute("address", "Ho Chi Minh City, Vietnam");
+request.setAttribute("skills", new String[]{"Java",
 "SQL", "Python", "HTML/CSS", "JavaScript", "Spring Boot"}); %>
 
 <!DOCTYPE html>
@@ -14,7 +18,7 @@ request.setAttribute("dob", "09/10/2005"); request.setAttribute("address", "Ho C
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= application.getInitParameter("siteTitle") %></title>
-    <link rel="stylesheet" href="index.css?v=1" />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <div class="container">
