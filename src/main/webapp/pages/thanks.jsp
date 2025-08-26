@@ -22,8 +22,7 @@
       or the Return button shown below.
     </p>
 
-    <form action="join" method="get">
-      <input type="hidden" name="action" value="join" />
+    <form action="/" method="get">
       <input type="submit" value="Return" />
     </form>
   </body>
