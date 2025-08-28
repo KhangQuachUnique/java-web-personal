@@ -34,8 +34,8 @@
           value="Search Engine"
           checked
         />Search engine
-        <input type="radio" name="heardFrom" value="Friend" />Word of mouth
-        <input type="radio" name="heardFrom" value="Friend" />Social Media
+        <input type="radio" name="heardFrom" value="Word of mouth" />Word of mouth
+        <input type="radio" name="heardFrom" value="Social Media" />Social Media
         <input type="radio" name="heardFrom" value="Other" />Other
       </p>
 
