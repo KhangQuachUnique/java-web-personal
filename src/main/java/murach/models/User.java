@@ -6,6 +6,7 @@ public class User implements Serializable {
     private String firstName;
     private String lastName;
     private String email;
+    private String dob;
     private String heardFrom;
     private Boolean wantsUpdates;
     private Boolean emailOK;
@@ -13,14 +14,15 @@ public class User implements Serializable {
 
     // Constructor mặc định
     public User() {
-        this("", "", "", "", false, false, "");
+        this("", "", "", "", "", false, false, "");
     }
 
     // Constructor đầy đủ
-    public User(String firstName, String lastName, String email, String heardFrom, Boolean wantsUpdates, Boolean emailOK, String contactVia) {
+    public User(String firstName, String lastName, String email, String dob, String heardFrom, Boolean wantsUpdates, Boolean emailOK, String contactVia) {
         this.firstName = firstName;
         this.lastName  = lastName;
         this.email     = email;
+        this.dob       = dob;
         this.heardFrom = heardFrom;
         this.emailOK     = emailOK;
         this.wantsUpdates = wantsUpdates;
@@ -80,7 +82,7 @@ public class User implements Serializable {
     // Thêm tiện ích để in ra thông tin User
     @Override
     public String toString() {
-        return String.format("User[firstName=%s, lastName=%s, email=%s, heardFrom=%s, wantsUpdates=%b, emailOK=%b, contactVia=%s]",
-                firstName, lastName, email, heardFrom, wantsUpdates, emailOK, contactVia);
+        return String.format("User[firstName=%s, lastName=%s, email=%s, dob=%s, heardFrom=%s, wantsUpdates=%b, emailOK=%b, contactVia=%s]",
+                firstName, lastName, email, dob, heardFrom, wantsUpdates, emailOK, contactVia);
     }
 }

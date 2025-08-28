@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Murach's Java Servlets and JSP</title>
-    <link rel="stylesheet" href="styles/survey.css" />
+    <link rel="stylesheet" href="./styles/survey.css?v=1" />
   </head>
   <body>
     <img src="images/murachlogo.jpg" alt="Murach Logo" />

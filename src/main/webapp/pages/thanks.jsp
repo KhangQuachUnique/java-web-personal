@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title><%= application.getInitParameter("siteTitle") %></title>
+      <link rel="stylesheet" href="./styles/thanks.css" />
   </head>
   <body>
     <h1>Thanks for joining our email list!</h1>
