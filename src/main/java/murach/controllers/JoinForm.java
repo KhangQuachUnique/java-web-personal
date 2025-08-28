@@ -35,12 +35,13 @@ public class JoinForm extends HttpServlet {
                 String email     = request.getParameter("email");
 
                 // Tạo User object và lưu DB
-                User user = new User(firstName, lastName, email);
+                User user = new User();
                 UserDB.insert(user);
 
                 // Sử dụng constant thay vì hard-code URL
                 response.sendRedirect(PathConstants.THANKS);
                 return;
+
 
             default:
                 page = PathConstants.JOIN_FORM_JSP; // sử dụng constant
