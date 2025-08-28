@@ -24,7 +24,7 @@
       <label>Email</label>
       <input type="email" name="email" required /><br />
       <label for="dob">Day of Birth:</label>
-      <input type="date" name="dob" required /><br />
+      <input type="date" name="dob"/><br />
 
       <h2>How did you hear about us?</h2>
       <p>

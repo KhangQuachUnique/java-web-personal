@@ -29,13 +29,23 @@ public class Survey extends HttpServlet {
                 String firstName = request.getParameter("firstName");
                 String lastName  = request.getParameter("lastName");
                 String email     = request.getParameter("email");
-
+                String heardFrom = request.getParameter("heardFrom");
+                String wantsUpdates = request.getParameter("wantsUpdates");
+                String emailOK = request.getParameter("emailOK");
+                String contactVia = request.getParameter("contactVia");
                 // Tạo User object và lưu DB
-                User user = new User(firstName, lastName, email);
+                User user = new User(firstName, lastName, email,
+                        heardFrom,
+                        wantsUpdates != null,
+                        emailOK != null,
+                        contactVia);
                 UserDB.insert(user);
-
+                request.setAttribute("user", user);
                 // Sử dụng constant thay vì hard-code URL
-                response.sendRedirect(PathConstants.THANKS);
+//                response.sendRedirect(PathConstants.THANKS);
+                getServletContext()
+                        .getRequestDispatcher(PathConstants.THANKS_JSP)
+                        .forward(request, response);
                 return;
 
             default:

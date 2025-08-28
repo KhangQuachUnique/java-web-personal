@@ -17,6 +17,18 @@
     <label>Last Name:</label>
     <span>${user.lastName}</span><br />
 
+        <label>Heard From:</label>
+        <span>${user.heardFrom}</span><br />
+
+        <label>Wants Updates:</label>
+        <span>${user.wantsUpdates}</span><br />
+
+        <label>Email OK:</label>
+        <span>${user.emailOK}</span><br />
+
+        <label>Contact Via:</label>
+        <span>${user.contactVia}</span><br />
+
     <p>
       To enter another email address, click on the Back button in your browser
       or the Return button shown below.

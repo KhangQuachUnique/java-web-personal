@@ -52,7 +52,7 @@ public class UserDB {
        if (index >= 0 && index < users.size()) {
            return users.get(index);
        } else {
-           return new User("N/A", "N/A", "N/A");
+           return new User();
        }
    }
 
@@ -60,7 +60,7 @@ public class UserDB {
        if (!users.isEmpty()) {
            return users.get(users.size() - 1);
        } else {
-           return new User("N/A", "N/A", "N/A");
+           return new User();
        }
    }
 }
