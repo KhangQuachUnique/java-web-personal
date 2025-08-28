@@ -35,7 +35,7 @@ public class JoinForm extends HttpServlet {
                 String email     = request.getParameter("email");
 
                 // Tạo User object và lưu DB
-                User user = new User();
+                User user = new User(firstName, lastName, email, "", "", false, false, "");
                 UserDB.insert(user);
 
                 // Sử dụng constant thay vì hard-code URL
