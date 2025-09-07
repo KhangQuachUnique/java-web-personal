@@ -124,14 +124,31 @@ request.setAttribute("skills", new String[]{"Java",
         <div class="homeworks-grid">
           <div class="homework-card">
             <h3>Assignment 2</h3>
-            <p>Introduction to Java Programming</p>
-            <a href="/join" class="btn btn-primary">View Details</a>
+            <p>Bai tap 2 (21/8)</p>
+            <a href="${pageContext.request.contextPath}/join" class="btn btn-primary">View Details</a>
           </div>
           <div class="homework-card">
             <h3>Assignment 3</h3>
-            <p>Introduction to Java Programming</p>
-            <a href="/survey" class="btn btn-primary">View Details</a>
+            <p>Bai tap 3 (26/8)</p>
+            <a href="${pageContext.request.contextPath}/survey" class="btn btn-primary">View Details</a>
           </div>
+            <div class="homework-card">
+                <h3>Assignment 4</h3>
+                <p>Bai tap 4 (29/8)</p>
+                <a href="${pageContext.request.contextPath}/survey" class="btn btn-primary">View Details</a>
+            </div>
+            <div class="homework-card">
+                <h3>Assignment 5 (6.1)</h3>
+                <p>Bai tap 5 (4/9)
+                    (Chuong 6)</p>
+                <a href="${pageContext.request.contextPath}/emailList" class="btn btn-primary">View Details</a>
+            </div>
+            <div class="homework-card">
+                <h3>Assignment 5 (6.2)</h3>
+                <p>Bai tap 5 (4/9)
+                    (Chuong 6)</p>
+                <a href="${pageContext.request.contextPath}/ch06_ex2" class="btn btn-primary">View Details</a>
+            </div>
         </div>
       </section>
 

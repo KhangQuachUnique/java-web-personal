@@ -38,6 +38,24 @@
     <url-pattern>/survey</url-pattern>
   </servlet-mapping>
 
+    <servlet>
+        <servlet-name>EmailListServlet</servlet-name>
+        <servlet-class>murach.controllers.EmailListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmailListServlet</servlet-name>
+        <url-pattern>/emailList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SurveyC6Servlet</servlet-name>
+        <servlet-class>murach.controllers.SurveyC6Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SurveyC6Servlet</servlet-name>
+        <url-pattern>/ch06_ex2</url-pattern>
+    </servlet-mapping>
+
   <!-- Cấu hình session -->
   <session-config>
     <session-timeout>30</session-timeout>
@@ -45,7 +63,6 @@
 
   <!-- File mặc định khi truy cập web -->
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
 

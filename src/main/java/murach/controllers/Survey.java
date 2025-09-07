@@ -37,7 +37,7 @@ public class Survey extends HttpServlet {
                 // Tạo User object và lưu DB
                 User user = new User(firstName, lastName, email, dob,
                         heardFrom,
-                        wantsUpdates != null,
+                        wantsUpdates ,
                         emailOK != null,
                         contactVia);
                 UserDB.insert(user);

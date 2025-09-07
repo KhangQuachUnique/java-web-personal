@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title><%= application.getInitParameter("siteTitle") %></title>
-    <link rel="stylesheet" href="./pages/joinForm.css" />
+    <link rel="stylesheet" href="../styles/joinForm.css" />
   </head>
   <body class="form-body">
     <h1>JOIN OUR EMAIL LIST</h1>
