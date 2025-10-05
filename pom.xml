@@ -35,6 +35,22 @@
           <artifactId>jstl</artifactId>
           <version>1.2</version>
       </dependency>
+    <!-- JPA API (javax.persistence) and Hibernate ORM implementation -->
+    <dependency>
+      <groupId>javax.persistence</groupId>
+      <artifactId>javax.persistence-api</artifactId>
+      <version>2.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.6.15.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.7.4</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>java-web-personal</finalName>

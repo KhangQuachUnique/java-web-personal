@@ -193,9 +193,10 @@ tr:nth-child(odd) {
   color: var(--accent-2);
 }
 
-
 /* Remove remaining purple accents on homepage (index.css classes) */
-.hero-title { color: var(--accent-2) !important; }
+.hero-title {
+  color: var(--accent-2) !important;
+}
 .gradient-text {
   background: none !important;
   -webkit-background-clip: initial !important;
@@ -204,21 +205,57 @@ tr:nth-child(odd) {
   color: var(--accent-2) !important;
   text-shadow: 0 1px 0 #fff !important;
 }
-.hero-subtitle { color: var(--accent-3) !important; }
-.hero-description { color: var(--ink-2) !important; }
-.section-header p { color: var(--ink-2) !important; }
-.project-content h3 { color: var(--accent-2) !important; }
-.about-name { color: var(--accent-2) !important; }
-.about-headline { color: var(--accent-3) !important; }
-.about-avatar { border-color: var(--accent-2) !important; }
-.contact-info h3 { color: var(--ink-2) !important; }
-.homework-card h3 { color: var(--accent-2) !important; }
-.homework-card p { color: var(--ink-2) !important; }
-.about-fact dt { color: var(--accent-2) !important; }
-.about-fact a { color: var(--accent-3) !important; }
-.btn:focus, a:focus, button:focus, .skill-badge:focus { outline-color: var(--accent-3) !important; }
-.skill-badge { background: var(--accent); color: #fffaf2; }
-.skill-badge:hover, .skill-badge:focus { background: var(--accent-2); color: #fffaf2; }
+.hero-subtitle {
+  color: var(--accent-3) !important;
+}
+.hero-description {
+  color: var(--ink-2) !important;
+}
+.section-header p {
+  color: var(--ink-2) !important;
+}
+.project-content h3 {
+  color: var(--accent-2) !important;
+}
+.about-name {
+  color: var(--accent-2) !important;
+}
+.about-headline {
+  color: var(--accent-3) !important;
+}
+.about-avatar {
+  border-color: var(--accent-2) !important;
+}
+.contact-info h3 {
+  color: var(--ink-2) !important;
+}
+.homework-card h3 {
+  color: var(--accent-2) !important;
+}
+.homework-card p {
+  color: var(--ink-2) !important;
+}
+.about-fact dt {
+  color: var(--accent-2) !important;
+}
+.about-fact a {
+  color: var(--accent-3) !important;
+}
+.btn:focus,
+a:focus,
+button:focus,
+.skill-badge:focus {
+  outline-color: var(--accent-3) !important;
+}
+.skill-badge {
+  background: var(--accent);
+  color: #fffaf2;
+}
+.skill-badge:hover,
+.skill-badge:focus {
+  background: var(--accent-2);
+  color: #fffaf2;
+}
 /* Footer */
 .footer {
   background: #e8dcc6;
