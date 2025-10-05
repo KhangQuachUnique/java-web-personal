@@ -14,18 +14,19 @@ import java.util.Properties;
  */
 public final class DbUtil {
 
-    // You can move these to environment variables or web.xml context params later.
-    private static final String HOST = "db.obuysiigsdqovgdneqbx.supabase.co";
-    private static final int PORT = 5432;
-    private static final String DATABASE = "postgres";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "kadfwfsfsvs"; // TODO: do not commit plaintext secrets in real projects
+    // Environment-driven configuration with safe defaults for dev
+    private static final String ENV_DB_URL = getenvOrNull("DB_URL");
+    private static final String HOST = getenvOrDefault("DB_HOST", "db.obuysiigsdqovgdneqbx.supabase.co");
+    private static final int PORT = Integer.parseInt(getenvOrDefault("DB_PORT", "5432"));
+    private static final String DATABASE = getenvOrDefault("DB_NAME", "postgres");
+    private static final String USER = getenvOrDefault("DB_USER", "postgres");
+    private static final String PASSWORD = getenvOrDefault("DB_PASSWORD", "kadfwfsfsvs");
+    private static final String SSLMODE = getenvOrDefault("DB_SSLMODE", "require");
 
-    // Full JDBC URL with SSL required (recommended by Supabase)
-    private static final String JDBC_URL = String.format(
-            "jdbc:postgresql://%s:%d/%s?sslmode=require",
-            HOST, PORT, DATABASE
-    );
+    // Build JDBC URL: prefer DB_URL if provided; else compose from parts
+    private static final String JDBC_URL = (ENV_DB_URL != null && !ENV_DB_URL.isEmpty())
+        ? ENV_DB_URL
+        : String.format("jdbc:postgresql://%s:%d/%s?sslmode=%s", HOST, PORT, DATABASE, SSLMODE);
 
     private DbUtil() {}
 
@@ -48,5 +49,11 @@ public final class DbUtil {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private static String getenvOrNull(String k) { return System.getenv(k); }
+    private static String getenvOrDefault(String k, String d) {
+        String v = System.getenv(k);
+        return (v == null || v.isEmpty()) ? d : v;
     }
 }

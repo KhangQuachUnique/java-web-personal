@@ -65,6 +65,15 @@
         <url-pattern>/users</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>HealthServlet</servlet-name>
+        <servlet-class>murach.controllers.HealthServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HealthServlet</servlet-name>
+        <url-pattern>/health</url-pattern>
+    </servlet-mapping>
+
     <!-- Cấu hình session -->
     <session-config>
         <session-timeout>30</session-timeout>

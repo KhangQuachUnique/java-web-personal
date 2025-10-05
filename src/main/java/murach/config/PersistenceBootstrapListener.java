@@ -11,10 +11,22 @@ import javax.servlet.annotation.WebListener;
 public class PersistenceBootstrapListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        // Ensure required DB schema exists before JPA usage
-        SchemaEnsurer.ensureUsersTable();
-        // Trigger JPA EMF creation so Hibernate can apply hbm2ddl action on startup
-        JpaUtil.getEntityManagerFactory();
+        // Avoid failing app startup if DB is unreachable in deploy environment.
+        // By default, do not touch the DB at startup. Enable via env DB_BOOTSTRAP=true if desired.
+        String bootstrap = System.getenv("DB_BOOTSTRAP");
+        boolean doBootstrap = bootstrap != null && bootstrap.equalsIgnoreCase("true");
+        if (doBootstrap) {
+            try {
+                SchemaEnsurer.ensureUsersTable();
+            } catch (Exception e) {
+                System.err.println("[Bootstrap] Schema ensure failed: " + e.getMessage());
+            }
+            try {
+                JpaUtil.getEntityManagerFactory();
+            } catch (Exception e) {
+                System.err.println("[Bootstrap] JPA init failed: " + e.getMessage());
+            }
+        }
     }
 
     @Override
