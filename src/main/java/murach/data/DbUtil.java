@@ -13,20 +13,31 @@ import java.util.Properties;
  * - Consider moving credentials to environment variables in production.
  */
 public final class DbUtil {
+    static {
+        // Ensure the PostgreSQL driver is registered (some containers require explicit load)
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
+            System.err.println("PostgreSQL JDBC driver not found on classpath: " + e.getMessage());
+        }
+    }
 
     // Environment-driven configuration with safe defaults for dev
     private static final String ENV_DB_URL = getenvOrNull("DB_URL");
-    private static final String HOST = getenvOrDefault("DB_HOST", "db.obuysiigsdqovgdneqbx.supabase.co");
-    private static final int PORT = Integer.parseInt(getenvOrDefault("DB_PORT", "5432"));
+    // Defaults point to Supabase connection pooler
+    private static final String HOST = getenvOrDefault("DB_HOST", "aws-1-ap-southeast-1.pooler.supabase.com");
+    private static final int PORT = Integer.parseInt(getenvOrDefault("DB_PORT", "6543"));
     private static final String DATABASE = getenvOrDefault("DB_NAME", "postgres");
-    private static final String USER = getenvOrDefault("DB_USER", "postgres");
+    private static final String USER = getenvOrDefault("DB_USER", "postgres.obuysiigsdqovgdneqbx");
     private static final String PASSWORD = getenvOrDefault("DB_PASSWORD", "kadfwfsfsvs");
-    private static final String SSLMODE = getenvOrDefault("DB_SSLMODE", "require");
+    private static final String SSLMODE = getenvOrDefault("DB_SSLMODE", "");
 
     // Build JDBC URL: prefer DB_URL if provided; else compose from parts
     private static final String JDBC_URL = (ENV_DB_URL != null && !ENV_DB_URL.isEmpty())
-        ? ENV_DB_URL
-        : String.format("jdbc:postgresql://%s:%d/%s?sslmode=%s", HOST, PORT, DATABASE, SSLMODE);
+            ? ENV_DB_URL
+            : String.format("jdbc:postgresql://%s:%d/%s?user=%s&password=%s%s",
+                HOST, PORT, DATABASE, USER, PASSWORD,
+                (SSLMODE != null && !SSLMODE.isEmpty()) ? ("&sslmode=" + SSLMODE) : "");
 
     private DbUtil() {}
 
