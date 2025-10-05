@@ -5,16 +5,16 @@ request.setAttribute("studentId", "23133033"); request.setAttribute("email",
 "kadfwfsfsvs@gmail.com"); request.setAttribute("studentEmail",
 "23133033@student.hcmute.edu.vn"); request.setAttribute("phone", "0916433455");
 request.setAttribute("github", "https://github.com/KhangQuachUnique");
-request.setAttribute("dob", "09/10/2005"); request.setAttribute("address", "Ho
-Chi Minh City, Vietnam"); request.setAttribute("skills", new String[]{"Java",
-"SQL", "Python", "HTML/CSS", "JavaScript", "Spring Boot"}); %>
+request.setAttribute("dob", "09/10/2005");
+request.setAttribute("address", "Ho Chi Minh City, Vietnam"); request.setAttribute("skills", new String[]{ "Java",
+"SQL", "Python", "HTML/CSS", "JavaScript", "Spring Boot" }); %>
 
 <!DOCTYPE html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= application.getInitParameter("siteTitle") %></title>
+    <title><%= application . getInitParameter ( "siteTitle" ) %></title>
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
@@ -209,23 +209,23 @@ Chi Minh City, Vietnam"); request.setAttribute("skills", new String[]{"Java",
             >
           </div>
           <div class="homework-card">
-            <h3>DB Demo</h3>
-            <p>select * from users (JPA demo)</p>
-            <a
-              href="${pageContext.request.contextPath}/users"
-              class="btn btn-primary"
-              >Open</a
-            >
-          </div>
-          <div class="homework-card">
-            <h3>SQL Console</h3>
-            <p>Nhập câu lệnh SELECT và chạy trực tiếp</p>
+            <h3>Assignment 8 (12)</h3>
+            <p>Bai tap ket noi toi DB (Chuong 12)</p>
             <a
               href="${pageContext.request.contextPath}/sql"
               class="btn btn-primary"
-              >Open</a
+              >View Details</a
             >
           </div>
+            <div class="homework-card">
+                <h3>Assignment 9 (13)</h3>
+                <p>Bai tap dung JPA mapping, co test create user (Chuong 13)</p>
+                <a
+                        href="${pageContext.request.contextPath}/users"
+                        class="btn btn-primary"
+                >View Details</a
+                >
+            </div>
         </div>
       </section>
 

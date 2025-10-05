@@ -56,6 +56,15 @@
         <url-pattern>/ch06_ex2</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UsersServlet</servlet-name>
+        <servlet-class>murach.controllers.UsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UsersServlet</servlet-name>
+        <url-pattern>/users</url-pattern>
+    </servlet-mapping>
+
     <!-- Cấu hình session -->
     <session-config>
         <session-timeout>30</session-timeout>
