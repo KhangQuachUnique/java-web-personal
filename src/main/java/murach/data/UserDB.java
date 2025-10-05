@@ -1,6 +1,7 @@
 package murach.data;
 
 import murach.models.User;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,19 +49,19 @@ public class UserDB {
         return false;
     }
 
-   public static User getUser(int index) {
-       if (index >= 0 && index < users.size()) {
-           return users.get(index);
-       } else {
-           return new User();
-       }
-   }
+    public static User getUser(int index) {
+        if (index >= 0 && index < users.size()) {
+            return users.get(index);
+        } else {
+            return new User();
+        }
+    }
 
-   public static User getLastUser() {
-       if (!users.isEmpty()) {
-           return users.get(users.size() - 1);
-       } else {
-           return new User();
-       }
-   }
+    public static User getLastUser() {
+        if (!users.isEmpty()) {
+            return users.get(users.size() - 1);
+        } else {
+            return new User();
+        }
+    }
 }

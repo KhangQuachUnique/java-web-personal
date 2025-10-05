@@ -1,44 +1,53 @@
-/* The styles for the elements */
-body { 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 85%;
-    margin-left: 2em;
-    margin-right: 2em;
-    width: 400px;
-}
-h1 {     
-    font-size: 140%;
-    color: teal;
-    margin-bottom: .5em;    
-}
-h2 {     
-    font-size: 120%;
-    color: teal;
-    margin-bottom: .5em;    
-}
-label {
-    float: left;
-    width: 7em;
-    margin-bottom: 0.5em;
-    font-weight: bold;
-}
-input[type="text"], input[type="email"] {  /* An attribute selector */
-    width: 15em;
-    margin-left: 0.5em;    
-    margin-bottom: 0.5em;
-}
-span {
-    margin-left: 0.5em;    
-    margin-bottom: 0.5em;    
-}
-br {
-    clear: both;
+@import url("./vintage.css");
+
+/* Vintage restyle for Email List page (keep structure & names) */
+body {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-size: 92%;
+  margin: 2em auto;
+  width: 420px;
 }
 
-/* The styles for the classes */
+h1 {
+  font-size: 160%;
+  color: var(--accent-2);
+  margin-bottom: 0.6em;
+  font-family: "Pacifico", "Times New Roman", serif;
+}
+
+h2 {
+  font-size: 125%;
+  color: var(--accent-3);
+  margin-bottom: 0.5em;
+}
+
+label {
+  float: left;
+  width: 8em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 16em;
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+span {
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+br {
+  clear: both;
+}
+
 .pad_top {
-    padding-top: 0.25em;
+  padding-top: 0.3em;
 }
 .margin_left {
-    margin-left: 0.5em;
+  margin-left: 0.6em;
 }

@@ -28,8 +28,7 @@ public class EmailListServlet extends HttpServlet {
         // perform action and set URL to appropriate page
         if (action.equals("join")) {
             url = "/pages/emailList.jsp";    // the "join" page
-        }
-        else if (action.equals("add")) {
+        } else if (action.equals("add")) {
             // get parameters from the request
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
@@ -48,8 +47,7 @@ public class EmailListServlet extends HttpServlet {
                     firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
                 message = "Please fill out all three text boxes.";
                 url = "/pages/emailList.jsp";
-            }
-            else {
+            } else {
                 message = null;
                 url = "/pages/thanks2.jsp";
                 UserDB.insert(user);

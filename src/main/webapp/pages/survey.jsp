@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Murach's Java Servlets and JSP</title>
     <link rel="stylesheet" href="./styles/survey.css?v=1" />
+    <link rel="stylesheet" href="../styles/vintage.css" />
   </head>
   <body>
     <img src="images/murachlogo.jpg" alt="Murach Logo" />
@@ -24,7 +25,7 @@
       <label>Email</label>
       <input type="email" name="email" required /><br />
       <label for="dob">Day of Birth:</label>
-      <input type="date" name="dob"/><br />
+      <input type="date" name="dob" /><br />
 
       <h2>How did you hear about us?</h2>
       <p>
@@ -34,9 +35,9 @@
           value="Search Engine"
           checked
         />Search engine
-        <input type="radio" name="heardFrom" value="Word of mouth" />Word of mouth
-        <input type="radio" name="heardFrom" value="Social Media" />Social Media
-        <input type="radio" name="heardFrom" value="Other" />Other
+        <input type="radio" name="heardFrom" value="Word of mouth" />Word of
+        mouth <input type="radio" name="heardFrom" value="Social Media" />Social
+        Media <input type="radio" name="heardFrom" value="Other" />Other
       </p>
 
       <h2>

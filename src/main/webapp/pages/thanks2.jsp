@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:include page="/includes/header.html" />
+<jsp:include page="/includes/header.html"/>
 
 <h1>Thanks for joining our email list</h1>
 
@@ -20,4 +20,4 @@
     <input type="submit" value="Return">
 </form>
 
-<jsp:include page="/includes/footer.jsp" />
+<jsp:include page="/includes/footer.jsp"/>

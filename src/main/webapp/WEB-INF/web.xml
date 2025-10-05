@@ -5,38 +5,38 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                              http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
 
-  <context-param>
-    <param-name>siteTitle</param-name>
-    <param-value>KhangQuach</param-value>
-  </context-param>
+    <context-param>
+        <param-name>siteTitle</param-name>
+        <param-value>KhangQuach</param-value>
+    </context-param>
 
-  <!-- Khai báo servlet -->
-  <servlet>
-    <servlet-name>RegisterForm</servlet-name>
-    <servlet-class>murach.controllers.JoinForm</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RegisterForm</servlet-name>
-    <url-pattern>/join</url-pattern>
-  </servlet-mapping>
+    <!-- Khai báo servlet -->
+    <servlet>
+        <servlet-name>RegisterForm</servlet-name>
+        <servlet-class>murach.controllers.JoinForm</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterForm</servlet-name>
+        <url-pattern>/join</url-pattern>
+    </servlet-mapping>
 
-  <servlet>
-    <servlet-name>Thanks</servlet-name>
-    <servlet-class>murach.controllers.Thanks</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Thanks</servlet-name>
-    <url-pattern>/thanks</url-pattern>
-  </servlet-mapping>
+    <servlet>
+        <servlet-name>Thanks</servlet-name>
+        <servlet-class>murach.controllers.Thanks</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Thanks</servlet-name>
+        <url-pattern>/thanks</url-pattern>
+    </servlet-mapping>
 
-  <servlet>
-    <servlet-name>Survey</servlet-name>
-    <servlet-class>murach.controllers.Survey</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Survey</servlet-name>
-    <url-pattern>/survey</url-pattern>
-  </servlet-mapping>
+    <servlet>
+        <servlet-name>Survey</servlet-name>
+        <servlet-class>murach.controllers.Survey</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Survey</servlet-name>
+        <url-pattern>/survey</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>EmailListServlet</servlet-name>
@@ -56,14 +56,14 @@
         <url-pattern>/ch06_ex2</url-pattern>
     </servlet-mapping>
 
-  <!-- Cấu hình session -->
-  <session-config>
-    <session-timeout>30</session-timeout>
-  </session-config>
+    <!-- Cấu hình session -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
 
-  <!-- File mặc định khi truy cập web -->
-  <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
+    <!-- File mặc định khi truy cập web -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
 
 </web-app>

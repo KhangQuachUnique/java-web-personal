@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title><%= application.getInitParameter("siteTitle") %></title>
-      <link rel="stylesheet" href="./styles/thanks.css" />
+    <link rel="stylesheet" href="./styles/thanks.css" />
+    <link rel="stylesheet" href="../styles/vintage.css" />
   </head>
   <body>
     <h1>Thanks for joining our email list!</h1>
@@ -18,17 +19,17 @@
     <label>Last Name:</label>
     <span>${user.lastName}</span><br />
 
-        <label>Heard From:</label>
-        <span>${user.heardFrom}</span><br />
+    <label>Heard From:</label>
+    <span>${user.heardFrom}</span><br />
 
-        <label>Wants Updates:</label>
-        <span>${user.wantsUpdates}</span><br />
+    <label>Wants Updates:</label>
+    <span>${user.wantsUpdates}</span><br />
 
-        <label>Email OK:</label>
-        <span>${user.emailOK}</span><br />
+    <label>Email OK:</label>
+    <span>${user.emailOK}</span><br />
 
-        <label>Contact Via:</label>
-        <span>${user.contactVia}</span><br />
+    <label>Contact Via:</label>
+    <span>${user.contactVia}</span><br />
 
     <p>
       To enter another email address, click on the Back button in your browser

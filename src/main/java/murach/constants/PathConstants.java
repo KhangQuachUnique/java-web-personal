@@ -2,7 +2,8 @@ package murach.constants;
 
 public class PathConstants {
 
-    private PathConstants() {} // private constructor để tránh tạo instance
+    private PathConstants() {
+    } // private constructor để tránh tạo instance
 
     // URL paths cho servlet mapping
     public static final String HOME = "/home";

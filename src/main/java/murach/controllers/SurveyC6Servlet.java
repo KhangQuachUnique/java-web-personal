@@ -23,7 +23,7 @@ public class SurveyC6Servlet extends HttpServlet {
 
         String url;
 
-        switch(action) {
+        switch (action) {
             case "join":
                 // forward to ch06_ex2.html
                 url = PathConstants.SURVEY_C6_HTML;
@@ -43,8 +43,7 @@ public class SurveyC6Servlet extends HttpServlet {
                 }
                 if (wantsUpdates == null) {
                     wantsUpdates = "No";
-                }
-                else {
+                } else {
                     wantsUpdates = "Yes";
                 }
                 System.out.println("DEBUG wantsUpdates raw value = " + request.getParameter("wantsUpdates"));

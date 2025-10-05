@@ -31,8 +31,8 @@ public class JoinForm extends HttpServlet {
             case "add":
                 // Lấy dữ liệu từ form
                 String firstName = request.getParameter("firstName");
-                String lastName  = request.getParameter("lastName");
-                String email     = request.getParameter("email");
+                String lastName = request.getParameter("lastName");
+                String email = request.getParameter("email");
 
                 // Tạo User object và lưu DB
                 User user = new User(firstName, lastName, email, "", "", "", false, "");
@@ -50,8 +50,8 @@ public class JoinForm extends HttpServlet {
 
         // Forward request & response
         getServletContext()
-            .getRequestDispatcher(page)
-            .forward(request, response);
+                .getRequestDispatcher(page)
+                .forward(request, response);
     }
 
     @Override

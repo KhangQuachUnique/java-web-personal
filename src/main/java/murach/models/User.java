@@ -21,20 +21,21 @@ public class User implements Serializable {
     // Constructor đầy đủ
     public User(String firstName, String lastName, String email, String dob,
                 String heardFrom, String wantsUpdates, Boolean emailOK, String contactVia) {
-        this.firstName    = firstName;
-        this.lastName     = lastName;
-        this.email        = email;
-        this.dob          = dob;
-        this.heardFrom    = heardFrom;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.dob = dob;
+        this.heardFrom = heardFrom;
         this.wantsUpdates = wantsUpdates;
-        this.emailOK      = emailOK;
-        this.contactVia   = contactVia;
+        this.emailOK = emailOK;
+        this.contactVia = contactVia;
     }
 
     // Getters & Setters
     public String getFirstName() {
         return firstName;
     }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -42,6 +43,7 @@ public class User implements Serializable {
     public String getLastName() {
         return lastName;
     }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -49,6 +51,7 @@ public class User implements Serializable {
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -56,6 +59,7 @@ public class User implements Serializable {
     public String getDob() {
         return dob;
     }
+
     public void setDob(String dob) {
         this.dob = dob;
     }
@@ -63,6 +67,7 @@ public class User implements Serializable {
     public String getHeardFrom() {
         return heardFrom;
     }
+
     public void setHeardFrom(String heardFrom) {
         this.heardFrom = heardFrom;
     }
@@ -70,6 +75,7 @@ public class User implements Serializable {
     public String getWantsUpdates() {
         return wantsUpdates;
     }
+
     public void setWantsUpdates(String wantsUpdates) {
         this.wantsUpdates = wantsUpdates;
     }
@@ -77,6 +83,7 @@ public class User implements Serializable {
     public Boolean getEmailOK() {
         return emailOK;
     }
+
     public void setEmailOK(Boolean emailOK) {
         this.emailOK = emailOK;
     }
@@ -84,6 +91,7 @@ public class User implements Serializable {
     public String getContactVia() {
         return contactVia;
     }
+
     public void setContactVia(String contactVia) {
         this.contactVia = contactVia;
     }

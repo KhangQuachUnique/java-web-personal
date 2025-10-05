@@ -20,16 +20,16 @@ public class Survey extends HttpServlet {
         }
 
         switch (action) {
-            case "join":
+            case "survey":
                 page = PathConstants.SURVEY_JSP; // sử dụng constant
                 break;
 
             case "submit":
                 // Lấy dữ liệu từ form
                 String firstName = request.getParameter("firstName");
-                String lastName  = request.getParameter("lastName");
-                String email     = request.getParameter("email");
-                String dob       = request.getParameter("dob");
+                String lastName = request.getParameter("lastName");
+                String email = request.getParameter("email");
+                String dob = request.getParameter("dob");
                 String heardFrom = request.getParameter("heardFrom");
                 String wantsUpdates = request.getParameter("wantsUpdates");
                 String emailOK = request.getParameter("emailOK");
@@ -37,10 +37,9 @@ public class Survey extends HttpServlet {
                 // Tạo User object và lưu DB
                 User user = new User(firstName, lastName, email, dob,
                         heardFrom,
-                        wantsUpdates ,
+                        wantsUpdates,
                         emailOK != null,
                         contactVia);
-                UserDB.insert(user);
                 request.setAttribute("user", user);
                 // Sử dụng constant thay vì hard-code URL
 //                response.sendRedirect(PathConstants.THANKS);

@@ -32,10 +32,12 @@ h1, h2 {
     text-align: center;
     text-shadow: 0 0 8px #a366e9;
 }
+
 h1 {
     font-size: 2.2rem;
     font-weight: 700;
 }
+
 h2 {
     font-size: 1.3rem;
     font-weight: 600;
@@ -65,6 +67,7 @@ input[type="text"], input[type="email"], select, textarea {
     margin-bottom: 0.5em;
     transition: border 0.2s;
 }
+
 input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
     border: 1.5px solid #a366e9;
     outline: none;
@@ -89,6 +92,7 @@ span.error {
     margin-top: 1.2em;
     transition: background 0.2s, transform 0.1s;
 }
+
 .btn:hover, input[type="submit"]:hover, button:hover {
     background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
     transform: translateY(-2px) scale(1.02);
@@ -103,20 +107,24 @@ table {
     margin: 1.5em 0;
     border: 1px solid #35354a;
 }
+
 th, td {
     border: 1px solid #35354a;
     text-align: left;
     padding: 0.7em 1em;
     color: #f3f3f3;
 }
+
 th {
     background: #181824;
     color: #a366e9;
     font-weight: 700;
 }
+
 tr:nth-child(even) {
     background: #232336;
 }
+
 tr:nth-child(odd) {
     background: #181824;
 }
@@ -129,6 +137,7 @@ tr:nth-child(odd) {
 .pad_top {
     padding-top: 0.7em;
 }
+
 .margin_left {
     margin-left: 0.7em;
 }
@@ -140,12 +149,15 @@ tr:nth-child(odd) {
         margin: 1.5rem 0.2rem;
         max-width: 98vw;
     }
+
     h1 {
         font-size: 1.3rem;
     }
+
     h2 {
         font-size: 1.1rem;
     }
+
     table, th, td {
         font-size: 0.98rem;
     }
