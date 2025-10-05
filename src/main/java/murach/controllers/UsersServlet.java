@@ -19,8 +19,12 @@ public class UsersServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // defensive: ensure schema before querying
         SchemaEnsurer.ensureUsersTable();
-        List<UserEntity> users = userRepository.findAll();
-        req.setAttribute("users", users);
+        try {
+            List<UserEntity> users = userRepository.findAll();
+            req.setAttribute("users", users);
+        } catch (Exception e) {
+            req.setAttribute("error", "Không thể kết nối tới database: " + e.getMessage());
+        }
         req.getRequestDispatcher("/pages/users.jsp").forward(req, resp);
     }
 }

@@ -1,11 +1,13 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %> <%@ page
-import="java.util.List" %> <%@ page import="murach.models.UserEntity" %> <%
-List<UserEntity>
-  users = (List<UserEntity
-    >) request.getAttribute("users"); String msg = request.getParameter("msg");
-    %>
-    <!DOCTYPE html>
-    <html lang="vi">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.List" %>
+<%@ page import="murach.models.UserEntity" %>
+<%
+    List<UserEntity> users = (List<UserEntity>) request.getAttribute("users");
+    String msg = request.getParameter("msg");
+    String error = (String) request.getAttribute("error");
+%>
+<!DOCTYPE html>
+<html lang="vi">
       <head>
         <meta charset="UTF-8" />
         <title>Users</title>
@@ -65,10 +67,15 @@ List<UserEntity>
           >
         </div>
 
-        <h1>Users</h1>
+  <h1>Users</h1>
+  <% if (error != null) { %>
+  <div style="color:#b00020; margin: 8px 0;">Error: <%= error %></div>
+  <% } %>
 
-        <% if (users == null || users.isEmpty()) { %>
-        <p>Chưa có user nào.</p>
+  <% if (users == null) { %>
+  <p>Không thể tải dữ liệu.</p>
+  <% } else if (users.isEmpty()) { %>
+  <p>Chưa có user nào.</p>
         <% } else { %>
         <table>
           <thead>
@@ -93,5 +100,3 @@ List<UserEntity>
         <% } %>
       </body>
     </html>
-  </UserEntity></UserEntity
->
