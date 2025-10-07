@@ -226,6 +226,15 @@ request.setAttribute("address", "Ho Chi Minh City, Vietnam"); request.setAttribu
                 >View Details</a
                 >
             </div>
+            <div class="homework-card">
+                <h3>Assignment 10 (14)</h3>
+                <p>Bai tap thuc hanh send Email (Chuong 13)</p>
+                <a
+                        href="${pageContext.request.contextPath}/send-mail"
+                        class="btn btn-primary"
+                >View Details</a
+                >
+            </div>
         </div>
       </section>
 
