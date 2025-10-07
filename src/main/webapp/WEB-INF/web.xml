@@ -20,6 +20,16 @@
         <url-pattern>/join</url-pattern>
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>SendMailServlet</servlet-name>
+        <servlet-class>murach.controllers.SendMailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SendMailServlet</servlet-name>
+        <url-pattern>/send-mail</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>Thanks</servlet-name>
         <servlet-class>murach.controllers.Thanks</servlet-class>
